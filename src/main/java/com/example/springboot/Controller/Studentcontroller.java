@@ -42,6 +42,7 @@ public ResponseEntity<List<Student>> getStudents(){
             studentOptional.get().setStudentAddress(stud.getStudentAddress());
             return new ResponseEntity<>(studentRepository.save(studentOptional.get()),
                     HttpStatus.OK);
+
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
